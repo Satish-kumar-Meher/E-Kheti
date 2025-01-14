@@ -1,0 +1,256 @@
+.features-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
+    background-repeat: repeat;
+    gap: 50px;
+}
+
+.crops-container{
+    max-width: 90%;
+    height: auto;
+    border-radius: 5rem;
+    background: #3d948447;
+    box-shadow: 0px 0px 313.042px 0px #D9D9D9, 0px 0px 178.881px 0px #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    flex-wrap: wrap;
+    
+}
+
+.crops{
+    width: 70px;
+    height: 70px;
+    border: 3px solid #3d9484;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.crops:hover{
+    box-shadow: 0 0 10px 5px rgba(76, 175, 80, 0.7);
+    transform: scale(1.05);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 70px;
+    border-radius: 0px 5rem 5rem 0px;
+    background-color: #3d9484;
+}
+
+.inter-radius{
+    width: 40px;
+    height: 70px;
+    background: #f0ebe6;
+    z-index: 1;
+    position: relative;
+    right: 5px;
+    border-radius: 0px 5rem 5rem 0px;
+}
+
+.transparent-inter-radius{
+    width: 40px;
+    height: 70px;
+    z-index: 1;
+    border-radius: 0px 5rem 5rem 0px;
+    background: #3d948447;
+}
+
+.lucide-plus{
+    width: 50px;
+    height: 40px;
+    padding-right: 15px;
+}
+
+.button:hover{
+    background-color: #4cbaa6;
+    cursor: pointer;
+}
+
+.weather-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: auto;
+    max-width: 90%;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.weather-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.temperature{
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.weather-icon{
+    width: 80px;
+    height: 60px;
+}
+
+.weather-status{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.weather-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-icon{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.location{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.weather-lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.detail-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.detail-item img{
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.detail-item span{
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .features-container{
+        gap: 30px;
+    }
+
+    .crops-container{
+        flex-direction: row;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        height: auto;
+        padding-left: 365px;
+      
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For IE and Edge */
+    }
+    .crops-container::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+    }
+    .crops{
+        width: 40px;
+        height: 35px;
+        min-height: 40px;
+        min-width: 49px;
+    }
+
+    .button{
+        width: 80px;
+        height: 60px;
+    }
+
+    .inter-radius, .transparent-inter-radius{
+        width: 30px;
+        height: 60px;
+    }
+
+    .lucide-plus{
+        width: 40px;
+        height: 30px;
+    }
+
+    .temperature{
+        font-size: 2.5rem;
+    }
+
+    .weather-icon{
+        width: 60px;
+        height: 50px;
+    }
+
+    .location{
+        font-size: 1.2rem;
+    }
+
+    .detail-item{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .crops{
+        width: 50px;
+        height: 50px;
+    }
+
+    .button{
+        width: 70px;
+        height: 50px;
+    }
+
+    .inter-radius, .transparent-inter-radius{
+        width: 25px;
+        height: 50px;
+    }
+
+    .temperature{
+        font-size: 2rem;
+    }
+
+    .weather-icon{
+        width: 50px;
+        height: 40px;
+    }
+
+    .location{
+        font-size: 1rem;
+    }
+
+    .detail-item{
+        font-size: 0.8rem;
+    }
+}

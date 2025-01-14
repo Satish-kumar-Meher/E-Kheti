@@ -1,0 +1,253 @@
+/* section {
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://img.freepik.com/free-photo/woman-working-rural-farming-agriculture-sector-celebrate-women-working-field-labour-day_23-2151251993.jpg?t=st=1724246640~exp=1724250240~hmac=88b90efffdc0c8b12c1ada5801d5498f55aed0318a352e3c99452507ae580c5b&w=1380') no-repeat center center/cover;
+    backdrop-filter: blur(10px); 
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .login-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 1; 
+  } */
+
+
+  .section-login {
+    /* margin: 0rem -1rem -1rem -1rem; */
+    height: 140vh;
+    /* top: 73px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://img.freepik.com/free-photo/woman-working-rural-farming-agriculture-sector-celebrate-women-working-field-labour-day_23-2151251993.jpg?t=st=1724246640~exp=1724250240~hmac=88b90efffdc0c8b12c1ada5801d5498f55aed0318a352e3c99452507ae580c5b&w=1380') no-repeat center center/cover;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    background-size: cover;
+    z-index: 1; /* Ensure it is behind the content */
+    filter: blur(7px); /* Apply the blur effect to the background image */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 90px;
+    padding: 2rem;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 3; /* Ensures the box appears above the blurred background */
+}
+
+
+  
+  .login-box h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#177985;
+  }
+  
+  .input-box {
+    position: relative;
+  
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-box input {
+    width: 100%;
+    color: black;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white; /* White background for the input boxes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .input-box input:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  .password-box .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-box .eye-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    
+    background: linear-gradient(240deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: rgba(46, 220, 171, 1.0);
+  } */
+
+
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(240deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-size: 200% 200%;
+    background-position: left center;
+    transition: background-position 0.6s ease, background 0.6s ease;
+}
+
+.login-button:hover {
+    background-position: right center;
+}
+
+.loader {
+  margin-right: 0.5rem; /* Adjusting the margin-right (mr-2) */
+  height: 1rem; /* Equivalent to h-4 */
+  width: 1rem; /* Equivalent to w-4 */
+  animation: spin 1s linear infinite; /* Adding the spin animation */
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  
+  .links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .links a {
+    color:#177985;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-login {
+    margin-top: 1.5rem;
+  }
+  
+  .social-login button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-login button svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .google-login {
+    /* background-color: #db4437; */
+    color: #177985;
+    border: 1px solid;
+  }
+  
+  .google-login:hover {
+    transform: scale(1.05);
+    background-color: azure;
+  }
+  
+  .facebook-login {
+    /* background-color: #3b5998; */
+    color: #177985;
+    border: 1px solid;
+  }
+  
+  .facebook-login:hover {
+    transform: scale(1.05);
+    background-color: azure;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @media (max-width: 480px) {
+    .login-box{
+      width: 360px;
+    }
+    .section-login{
+      height: 110vh;
+    }
+  }

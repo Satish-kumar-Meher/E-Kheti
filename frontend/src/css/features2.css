@@ -1,0 +1,268 @@
+.features-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
+    background-repeat: repeat;
+    gap: 50px;
+}
+
+.crops-container{
+    /* position: relative; */
+    /* top: 100px; */
+max-width: 80.875rem;
+height: 8.125rem;
+border-radius: 5rem;
+background: #3d948447;
+
+box-shadow: 0px 0px 313.042px 0px #D9D9D9, 0px 0px 178.881px 0px #D9D9D9;
+
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 50px;
+padding-left: 25px;
+  padding-right: 25px;
+}
+.crops{
+    width: 90px;
+    height: 90px;
+    border: 3px solid #3d9484;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    
+}
+.crops:hover{
+    box-shadow: 0 0 10px 5px rgba(76, 175, 80, 0.7);
+  transform: scale(1.05);
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 90px;
+    border-radius: 0px 5rem 5rem 0px;
+    background-color: #3d9484;
+}
+.inter-radius{
+    width: 50px;
+    height: 90px;
+    /* border: 1px solid black; */
+    background: #f0ebe6;
+    z-index: 1;
+    position: relative;
+  right: 5px;
+border-radius: 0px 5rem 5rem 0px;
+}
+.transparent-inter-radius{
+    width: 50px;
+    height: 90px;
+    z-index: 1;
+    border-radius: 0px 5rem 5rem 0px;
+    background: #3d948447;
+}
+.lucide-plus{
+    width: 70px;
+    height: 50px;
+    padding-right: 15px
+}
+.button:hover{
+    background-color: #4cbaa6;
+    cursor: pointer;
+}
+
+/* .weather-container{
+    width: 88rem;
+    height: 20rem;
+    border: 1px solid black;
+} */
+
+
+/* .weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/sky-clear.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .temperature {
+    text-align: center;
+  }
+  
+  .temp-and-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .temp-and-icon h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .weather-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .temperature p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .detail-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); 
+  }
+  
+  .detail-item span {
+    font-weight: bold;
+  }
+  
+  .location {
+    margin-top: 20px;
+  }
+  
+  .location h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  } */
+
+
+  .weather-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: url('../images/sky-clear.jpg') no-repeat center center; */
+    background-size: cover;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 13.6rem;
+    width: 77.8rem;
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* .weather-box::before {
+    content: "";
+    position: absolute;
+    
+    width: 77.8rem;
+    height: 13.6rem;
+    background: rgba(0, 0, 0, 0.5); 
+    filter: blur(5px); 
+    z-index: 1; 
+  }
+  
+  .weather-box > * {
+    position: relative; 
+    z-index: 2;
+  } */
+  
+  
+  
+  /* Upper part styling */
+  .weather-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .weather-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .temperature {
+    font-size: 4.5rem;
+    margin: 20px;
+    padding-left: 100px;
+  }
+  
+  .weather-icon {
+    width: 115px;
+    height: 70px;
+  }
+  
+  .weather-status {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .weather-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .location-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .location {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  /* Lower part styling */
+  .weather-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .detail-item img {
+    width: 37px;
+    height: 37px;
+    filter: brightness(0) invert(1); /* Makes the icons white */
+  }
+  
+  .detail-item span {
+    font-weight: bold;
+  }
+  
+  
+  

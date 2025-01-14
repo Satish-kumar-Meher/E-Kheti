@@ -1,0 +1,149 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.contact-container {
+  background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 800px;
+}
+
+/* Heading */
+.contact-heading {
+  font-size: 50px;
+  color: #1c4045;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px; /* Space below heading */
+}
+
+/* Wrapper for Map and Form */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px; /* Horizontal spacing between map and form */
+  margin-top: 20px; /* Space between heading and content */
+}
+
+/* Map Section */
+.map-section {
+  flex: 1;
+  min-width: 300px;
+  width: 60%;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  width: fit-content;
+  min-width: 300px;
+  width: 60%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #1c4045;
+}
+
+.text-area {
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  color: #1c4045;
+}
+
+.send-btn {
+  background-color: #1c4045;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 40px;
+  }
+
+  .content-wrapper {
+    flex-direction: column; /* Stack map and form vertically */
+    align-items: center;
+    gap: 30px; /* Vertical spacing between map and form */
+  }
+
+  .map-section,
+  .form-section {
+    width: 100%; /* Take full width */
+    max-width: 600px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 30px;
+    margin-bottom: 20px; /* Reduced spacing for smaller screens */
+  }
+
+  .input-field,
+  .text-area {
+    font-size: 14px;
+  }
+
+  .send-btn {
+    font-size: 14px;
+  }
+}
+
+/* General Spacing */
+.contact-heading {
+  margin-bottom: 50px; /* Gap between heading and content */
+}
+
+.content-wrapper {
+  margin-top: 40px; /* Space below heading for better aesthetics */
+}
+
+.map-section,
+.form-section {
+  margin-bottom: 20px; /* Vertical gap for responsive views */
+
+}

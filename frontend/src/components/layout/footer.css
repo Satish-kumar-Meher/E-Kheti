@@ -1,0 +1,264 @@
+/* footer.css */
+.footer-div {
+    /* background: linear-gradient(270deg, rgba(46, 220, 171, 1), rgba(22, 16, 38, 1)); */
+    background: 
+        /* Gradient overlay */
+        linear-gradient(
+            270deg, 
+            rgba(46, 220, 171, 0.7), 
+            rgba(22, 16, 38, 0.7)
+        ), 
+        /* Background image */
+        url('https://t4.ftcdn.net/jpg/02/18/35/69/240_F_218356901_sD5osSEexqWCL0MQWuSdCh3awhmh9mer.jpg') no-repeat center center/cover;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Add gap between columns */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    margin-left: 70px;
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer h4 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; /* Add space below heading */
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    width: 100%; /* Make border the same width as the heading */
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    left: 0;
+    bottom: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 15px 0; /* Add vertical space between list items */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #2edcab;
+}
+
+.contact-us-paragraph {
+    margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+.footer-text {
+    margin: 20px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8); /* Softer text color */
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6); /* Softer color for copyright */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px; /* Add space above social media icons */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: rotate(360deg);
+    fill: #2edcab;
+}
+
+/* Responsive design starts */
+
+/* Base mobile-first design */
+@media screen and (max-width: 480px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Keep gap between columns */
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer h4 {
+        font-size: 16px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-logo {
+        width: 80px; /* Adjust for smaller screens */
+        margin-left: 100px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Tablets and larger mobile devices */
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Keep gap between columns */
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer h4 {
+        font-size: 26px;
+    }
+
+    .footer-links a {
+        font-size: 20px;
+    }
+
+    .footer-logo {
+        width: 120px; /* Slightly larger logo */
+    }
+
+    .footer-text {
+        font-size: 22px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Tablets and small laptops */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        gap: 30px; /* Add space between columns */
+    }
+
+    .footer-column {
+        flex-basis: calc(50% - 30px); /* Adjust the basis to include space for the gap */
+    }
+
+    .footer h4 {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* For larger screens (desktops, laptops) */
+@media screen and (min-width: 1024px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px; /* Add space between columns */
+    }
+
+    .footer-column {
+        flex-basis: calc(25% - 30px); /* Four equal columns with gaps */
+    }
+
+    .footer h4 {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 15px;
+    }
+
+    .footer-logo {
+        width: 120px; /* Larger logo for desktops */
+    }
+
+    .footer-text {
+        font-size: 17px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,79 @@
+[
+    {
+        "id" : "1",
+        "name" : "Rice",
+        "description" : "this is rice crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://media.istockphoto.com/id/1002656572/vector/rice-plant-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=lYX-kWDub7TTIm_dhZww5Ob5utB3Eirn7Y_xa_Z2uv0="
+    },
+    
+    {
+        "id" : "2",
+        "name" : "Wheat",
+        "description" : "this is wheat crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://media.istockphoto.com/id/687888924/vector/ears-of-wheat-vector-sketch.jpg?s=612x612&w=0&k=20&c=ApyS-Q77p8cias5al0wRDYzBodg0KRQ581RSPnadOhw="
+    },
+    
+    {
+        "id" : "3",
+        "name" : "Suger-Cane",
+        "description" : "this is sugercane crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://img.freepik.com/premium-vector/sugar-cane-pretty-isolated-vector_570230-23.jpg"
+    },
+    {
+        "id" : "4",
+        "name" : "Maize",
+        "description" : "this is Mize crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://cdn.imgbin.com/6/22/15/imgbin-corn-on-the-cob-maize-crop-golden-corn-7gHFzGyQENnkceqphPG2FcGFN.jpg"
+    },
+    {
+        "id" : "5",
+        "name" : "Milet",
+        "description" : "this is Milet crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://thumbs.dreamstime.com/b/yellow-millet-isolated-white-background-yellow-millet-isolated-white-background-hand-drawn-realistic-vector-illustration-113152575.jpg"
+    },
+    {
+        "id" : "6",
+        "name" : "Cotton",
+        "description" : "this is Cotton crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://img.freepik.com/premium-vector/cotton-herb-flower-cartoon-style-white-background_144356-21817.jpg"
+    },
+    {
+        "id" : "7",
+        "name" : "Capcicum and chili",
+        "description" : "this is Cotton crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://www.shutterstock.com/image-vector/red-hot-chili-pepper-slice-260nw-2163591229.jpg"
+    },
+    {
+        "id" : "8",
+        "name" : "Penaut",
+        "description" : "this is Cotton crop. its an anual crop in india",
+        "tips" : {
+            "plantselection" : "Crop duration:\n\n• Long-duration varieties (160 days and longer) are suitable for irrigated areas.\n\n• Medium-duration varieties (120-140 days) are suitable for both rainfed and irrigated areas.\n\n• Short-duration varieties (less than 120 days) are suitable for drought-prone areas or for double cropping.\n\nCrop height:\n\n• Tall varieties (1.4 m and taller) are suitable for flood-prone and unleveled fields, but lodging may be a problem.\n\n• Medium-height varieties (1-1.2 m) are suitable for most areas and are less susceptible to lodging when fertilizer is used.\n\n• Short varieties are best suited for level fields, especially in irrigated areas. They are normally less than 1 m in height.\n\nGrain quality:\n\n• A premium is often paid for aromatic varieties, but yields are normally lower.\n\n• Eating qualities such as softness, stickiness, and color after cooking are important."
+        },
+        "imgUrl" : "https://png.pngtree.com/element_our/20190528/ourmid/pngtree-cartoon-hand-painted-bunch-of-peanut-png-free-material-image_1133320.jpg"
+    }
+    
+
+
+]

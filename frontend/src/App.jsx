@@ -1,0 +1,74 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AppLayout } from "./components/layout/Layout";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { ErrorPage } from "./pages/Erorr";
+import { Login } from "./pages/auth/Login";
+import { Register } from "./pages/auth/Register";
+import EmailVerificationPage from "./pages/auth/EmailVerification";
+import ForgotPasswordPage from "./pages/auth/ForgotPassword";
+import ResetPasswordPage from "./pages/auth/ResetPassword";
+import { ProfilePage } from "./pages/Profile";
+import { EditProfile } from "./pages/EditProfile";
+import { MainFeaturesPage } from "./pages/MainFeaturesPage";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home/>,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/login",
+        element: <Login/>,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/verify-otp",
+        element: <EmailVerificationPage />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPasswordPage/>,
+      },
+      {
+        path: "/reset-password/:token",
+        element: <ResetPasswordPage/>,
+      },
+      // {
+      //   path: "/chatbot",
+      //   element: <Chatbot/>,
+      // },
+      {
+        path: "/profile/:id",
+        element: <ProfilePage/>
+      },
+      {
+        path: "/editprofile",
+        element: <EditProfile/>
+      },
+      {
+        path: "/features",
+        element: <MainFeaturesPage/>
+      },
+    ],
+  },
+]);
+
+const App = () => {
+  return <RouterProvider router={router}> </RouterProvider>;
+};
+
+export default App;

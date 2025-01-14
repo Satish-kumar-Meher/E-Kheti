@@ -1,0 +1,136 @@
+
+.section-chat {
+    position: relative; /* Added for positioning the blur effect */
+    margin: 0rem -1rem -1rem -1rem;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-photo/refreshment-from-as-sprinklers-arc-water-geometric-greenery-fields_91128-4673.jpg?w=1380&t=st=1724295456~exp=1724296056~hmac=920e09ea9d3275c2a445ab5ca214cfd8964b3b85e63c719959fea1d121d3eccb') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section-chat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Uses the background image of the parent */
+    filter: blur(4px); /* Apply blur to the pseudo-element */
+    z-index: 0; /* Place the blur effect behind the chatbot container */
+}
+
+.chatbot-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Added to ensure it’s above the blurred background */
+    z-index: 1; /* Place the container above the blur effect */
+}
+
+.chat-messages {
+    max-height: 635px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Make the box shrink or grow based on content */
+    max-width: 80%; /* Limit the width to 80% of the container */
+    min-width: 100px; /* Ensure a minimum width for shorter messages */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+.chat-message.user {
+    background: linear-gradient(120deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    text-align: right;
+    color: white;
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.chat-message.bot {
+    background: linear-gradient(240deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    color: white;
+    text-align: left;
+    align-self: flex-start; /* Align bot messages to the left */
+    position: relative;
+}
+
+.chat-message.bot .speaker-icon {
+    position: absolute;
+    right: 10px;
+    top: 96%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.pause-icon {
+  position: absolute;
+    right: 10px;
+    top: 96%;
+    transform: translateY(-50%);
+    cursor: pointer
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.chat-input {
+    width: 450px;
+    padding: 10px;
+    margin-left: 12px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+.mic-icon {
+    position: absolute;
+    left: -17px;
+    padding-left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+}
+
+.send-button {
+    background-color: #1c7885;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: rgba(46, 220, 171, 1.0);
+}
+
+.send-button svg,
+.mic-icon svg,
+.speaker-icon svg {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,222 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    /* overflow-x: hidden; */
+}
+
+/* Image Container Section */
+.image-container {
+    width: 100%;
+    height: 105vh;
+    margin: 0 auto;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+    margin-top: 70px; /* Space for Navbar */
+}
+
+/* Arrows for Sliders */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.left-arrow {
+    width: 60px;
+    height: 60px;
+    left: 10px;
+}
+
+.right-arrow {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Text Container */
+.text-container {
+    padding: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+    width: 60%;
+    color: white;
+    font-size: 20px;
+}
+
+.welcome-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color:#ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(30), cursor 0.4s step-end infinite alternate;
+}
+
+.welcome-paragraph{
+    font-size: 1.8rem;
+}
+
+.common-container{
+    padding-top: 6rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4 {
+    padding: 10px 38px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 21px;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 1px 4px aliceblue;
+}
+
+.btn-2 {
+    background-color: #1c4045;
+}
+
+.btn-4 {
+    background: #2d2d2d;
+}
+
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover,
+.btn-4:hover {
+    background-color: rgba(46, 220, 171, 1.0);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Devices (Tablets and Large Phones) */
+@media (max-width: 768px) {
+    .image-container {
+        height: 40vh;
+    }
+    .common-container{
+        padding-top: 0rem;
+    }
+    .text-container {
+        width: 90%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .welcome-heading {
+        font-size: 28px;
+    }
+    .welcome-paragraph{
+        font-size: 1.4rem;
+    }
+    .btn-container {
+        gap: 2rem;
+    }
+
+    .btn-1,
+    .btn-2,
+    .btn-3,
+    .btn-4 {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+
+    .left-arrow {
+        width: 30px;
+        height: 30px;
+        left: 10px;
+    }
+    
+    .right-arrow {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .image-container {
+        height: 70vh;
+    background-size: cover;
+    background-position: right;
+    }
+    .common-container{
+        padding-top: 8rem;
+    }
+
+    .text-container {
+        width: 100%;
+        font-size: 13px;
+        padding: 1rem;
+    }
+
+    .welcome-heading {
+        font-size: 40px;
+    }
+.welcome-paragraph{
+    font-size: 25px;
+}
+    .btn-container {
+        gap: 1rem;
+    }
+.arrow{
+    top: 60%;
+}
+    .btn-1,
+    .btn-2,
+    .btn-3,
+    .btn-4 {
+        padding: 6px 9px;
+        font-size: 18px;
+    }
+}

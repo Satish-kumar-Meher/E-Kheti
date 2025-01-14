@@ -1,0 +1,280 @@
+/* General container styles */
+.section-chat {
+    position: relative; 
+    margin: 0rem -1rem -1rem -1rem;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-photo/refreshment-from-as-sprinklers-arc-water-geometric-greenery-fields_91128-4673.jpg?w=1380&t=st=1724295456~exp=1724296056~hmac=920e09ea9d3275c2a445ab5ca214cfd8964b3b85e63c719959fea1d121d3eccb') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section-chat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(4px);
+    z-index: 0;
+}
+
+/* Chatbot container */
+.chatbot-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 200%;
+    max-width: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: -100px;
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chatbot-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat messages */
+.chat-messages {
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Message styles */
+.chat-message {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+    min-width: 100px;
+    word-wrap: break-word;
+    transition: background-color 0.3s;
+}
+
+.chat-message.user {
+    background: linear-gradient(120deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    text-align: right;
+    color: white;
+    align-self: flex-end;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.user:hover {
+    background: linear-gradient(120deg, rgba(46, 220, 171, 0.9), rgba(22, 16, 38, 0.9));
+}
+
+.chat-message.bot {
+    background: linear-gradient(240deg, rgba(46, 220, 171, 1.0), rgba(22, 16, 38, 1.0));
+    color: white;
+    text-align: left;
+    align-self: flex-start;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.bot:hover {
+    background: linear-gradient(240deg, rgba(46, 220, 171, 0.9), rgba(22, 16, 38, 0.9));
+}
+
+/* Speaker and Pause icons */
+.chat-message.bot .speaker-icon,
+.chat-message.bot .pause-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.chat-message.bot .speaker-icon:hover,
+.chat-message.bot .pause-icon:hover {
+    color: #ffeb3b;
+}
+
+/* Chat input container */
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 10px 0 0 10px;
+    background-color: #f0f4f8;
+    transition: background-color 0.3s;
+}
+
+.chat-input:focus {
+    background-color: #e0e7ee;
+}
+
+.mic-icon {
+    position: absolute;
+    left: -17px;
+    padding-left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s;
+}
+
+.mic-icon:hover {
+    color: dodgerblue;
+}
+
+.send-button {
+    background-color: #1c7885;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.send-button:hover {
+    background-color: rgba(46, 220, 171, 1.0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.send-button svg,
+.mic-icon svg,
+.speaker-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.history-panel {
+    width: 250px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .history-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+/* Responsive Media Queries */
+
+/* Small devices (320px to 480px) */
+@media (max-width: 480px) {
+    .chatbot-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .chat-messages {
+        max-height: 300px;
+    }
+
+    .chat-input {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .send-button {
+        padding: 8px 10px;
+    }
+
+    .mic-icon {
+        font-size: 16px;
+    }
+}
+
+/* Medium devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .chatbot-container {
+        width: 90%;
+    }
+
+    .chat-messages {
+        max-height: 400px;
+    }
+
+    .send-button {
+        padding: 10px 14px;
+    }
+}
+
+/* Large devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .chatbot-container {
+        width: 85%;
+        max-width: 600px;
+    }
+
+    .chat-messages {
+        max-height: 500px;
+    }
+
+    .send-button {
+        padding: 12px 16px;
+    }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+    .chatbot-container {
+        width: 200%;
+    }
+
+    .chat-messages {
+        max-height: 300px;
+    }
+
+    .send-button {
+        padding: 10px 14px;
+    }
+
+    .mic-icon {
+        font-size: 18px;
+    }
+}

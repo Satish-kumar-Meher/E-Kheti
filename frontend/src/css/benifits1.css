@@ -1,0 +1,169 @@
+
+.benefits-section {
+    background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
+    background-size: contain;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+
+    color: #177985;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  .benefits-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    margin-bottom: 30px;
+  }
+  
+  .benefit-box {
+    position: relative;
+    width: 25%; /* Adjusted width for better responsiveness */
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #177985;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to top, #177985 50%, #ffffff 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  /* .box1 {
+    background-image: url("https://bl-i.thgim.com/public/todays-paper/tp-agri-biz-and-commodity/nvz1g7/article66863740.ece/alternates/FREE_1200/Syngenta-FMC-tGGNB88JUU.4.jpg.jpg");
+
+  } */
+  .read-more {
+    position: absolute;
+  bottom: 15px;
+  right: 55px;
+  z-index: -1;
+  }
+  .read-more-arrow {
+    position: absolute;
+  bottom: 19px;
+  right: 28px;
+  z-index: -1;
+  }
+  .benefit-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 1;
+  }
+  
+   .benefit-box p {
+    position: relative;
+    top: 52px;
+    z-index: -1;
+  }
+  .b-heading {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .benefit-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    background-position: bottom;
+    color: white;
+     & .read-more{
+    z-index: 1;
+  }
+  & .read-more-arrow{
+    z-index: 1;
+  }
+
+  & .box-image{
+    opacity: 0.6;
+  }
+  & p{
+    z-index: 1;
+  } 
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1200px) {
+    .benefit-box {
+      width: 25%; /* Adjust width for tablet and small desktops */
+      padding: 2.5rem;
+    }
+  
+    .section-heading {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .benefit-box {
+      width: 35%; /* Adjust width for larger mobile devices */
+      padding: 2rem;
+    }
+  
+    .section-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .benefits-container {
+      flex-direction: column; /* Stack boxes vertically */
+    }
+  
+    .benefit-box {
+      width: 70%; /* Adjust width for smaller screens */
+      margin: 15px auto;
+      padding: 2rem;
+    }
+  
+    .section-heading {
+      font-size: 1.75rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .benefit-box {
+      width: 85%; /* Smaller width for very small screens */
+      margin: 10px auto;
+      padding: 4rem;
+    }
+  
+    .section-heading {
+      font-size: 1.5rem;
+      position: relative;
+    top: 26px;
+    }
+
+     
+  .read-more {
+    position: absolute;
+  bottom: 8px;
+  right: 129px;
+  z-index: 1;
+  }
+  .read-more-arrow {
+    position: absolute;
+  bottom: 12px;
+  right: 103px;
+  z-index: 1;
+  }
+  }
+  
+  

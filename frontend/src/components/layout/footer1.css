@@ -1,0 +1,184 @@
+
+
+.footer-div{
+    margin-right: -1rem;
+    margin-left: -1rem;
+    margin-bottom: -1rem;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between;
+    padding: 40px;
+    background: 
+        /* Gradient overlay */
+        linear-gradient(
+            270deg, 
+            rgba(46, 220, 171, 0.7), 
+            rgba(22, 16, 38, 0.7)
+        ), 
+        /* Background image */
+        url('https://t4.ftcdn.net/jpg/02/18/35/69/240_F_218356901_sD5osSEexqWCL0MQWuSdCh3awhmh9mer.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative; /* For positioning content above the background */
+    /* z-index: 1; Ensure content is above background */
+    background-attachment: fixed;
+}
+
+.footer-column {
+    flex: 5;
+    margin: 0 20px;
+    min-width: 200px; /* Ensure columns don't shrink too much */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.footer-logo {
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+.copyright {
+    margin-top: 120px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+    padding-left: 154px; /* Add space for the arrow */
+}
+
+.footer-links a::before {
+    content: "➤";
+    position: absolute;
+    /* left: 130px; */
+    /* padding-left: -50px; */
+    margin-left: -1.5rem;
+    color: #1abc9c;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1abc9c;
+}
+
+.footer-links a:hover::before {
+    color: #16a085; /* Change arrow color on hover */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-media-paragraph {
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap social media icons if needed */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    transition: transform 0.5s ease;
+}
+
+.social-icon:hover {
+    transform: rotate(360deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+        text-align: center; /* Center text and items */
+    }
+
+    .footer-links li {
+        justify-content: center; /* Center align the list items */
+    }
+
+    .social-media {
+        justify-content: center; /* Center align social media icons */
+    }
+
+    .footer-logo {
+        width: 80px; /* Smaller logo for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-logo {
+        width: 60px; /* Further reduce logo size */
+    }
+
+    .footer-text {
+        font-size: 12px; /* Adjust font size */
+    }
+    .footer-links a {
+        padding-left: 0px;
+        
+    }
+    .footer-links a::before {
+        content: "➤";
+        position: absolute;
+        
+        margin-left: -1.5rem;
+        color: #1abc9c;
+        transition: color 0.3s;
+    }
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px; /* Smaller gap between icons */
+    }
+}
