@@ -3,13 +3,24 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 150vh;
+    width: 100%;
+    background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
+    background-repeat: repeat;
+    gap: 20px;
+    margin-top: 83px;
+}
+.features-container2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100%;
     background-image: url('https://wp.ditsolution.net/agrofarmnew/wp-content/uploads/2022/01/home-3-service-bg.jpg');
     background-repeat: repeat;
     gap: 20px;
 }
-
 .crops-container{
     max-width: 90%;
     height: auto;
@@ -180,6 +191,8 @@
 @media (max-width: 768px) {
     .features-container{
         gap: 15px;
+        margin-top: 73px;
+        height: 130vh;
     }
 
     .crops-container{
@@ -188,7 +201,7 @@
         flex-wrap: nowrap;
         height: auto;
         padding-left: 365px;
-      
+      margin-top: -30px;
         scrollbar-width: none; /* For Firefox */
         -ms-overflow-style: none; /* For IE and Edge */
     }
@@ -270,4 +283,341 @@
 }
 
 
+/* Container Styling */
+.scanner-container {
+    width: 90vw;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fdfaf4;
+}
 
+/* Images Container Styling */
+.scan-images-container {
+    display: flex;
+    justify-content: center; /* Center-align images */
+    align-items: center;
+    gap: 10px; /* Space between images and arrows */
+    width: 100%; /* Full width of the container */
+    flex-wrap: nowrap; /* Keep everything in one row unless wrapping is needed */
+}
+
+/* Individual Image Styling */
+.scan-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #245a50;
+    font-weight: 700;
+    font-size: 16px; /* Default font size */
+}
+
+/* Image Styling */
+.scan-image img {
+    width: 230px; /* Default width */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Arrow Styling */
+.pin-arrow {
+    font-size: 24px; /* Default arrow size */
+    color: #245a50; /* Matches other elements */
+    font-weight: 700;
+}
+
+/* Button Styling */
+.scan-btn {
+    background-color: #245a50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.scan-btn:hover {
+    background-color: #3d9484;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .scan-images-container {
+        gap: 8px; /* Reduce space between images and arrows */
+    }
+
+    .scan-image {
+        font-size: 14px; /* Smaller text */
+        margin-left: -4px;
+    }
+
+    .scan-image img {
+        width: 100px; /* Smaller image size */
+    }
+
+    .arrow {
+        font-size: 18px; /* Smaller arrow size */
+    }
+
+    .scan-btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scan-images-container {
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+        gap: 8px; /* Smaller gaps */
+    }
+
+    .scan-image {
+        font-size: 12px; /* Smaller text for headings */
+        margin-left: -2px;
+    }
+
+    .scan-image img {
+        width: 80px; /* Smallest image size */
+    }
+
+    .pin-arrow {
+        font-size: 16px; /* Smaller arrow size */
+    }
+
+    .scan-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .scan-image {
+        font-size: 12px; /* Smaller text for headings */
+        margin-left: -6px;
+    }
+
+}
+@media (max-width: 375px) {
+    .scan-image {
+        font-size: 12px; /* Smaller text for headings */
+        margin-left: -14px;
+    }
+    .scan-image img {
+        width: 70px; /* Smallest image size */
+    }
+
+}
+
+@media (max-width: 350px) {
+    .scan-image {
+        font-size: 12px; /* Smaller text for headings */
+        margin-left: -19px;
+    }
+    .scan-image img {
+        width: 70px; /* Smallest image size */
+    }
+
+}
+
+
+@media (max-width: 330px) {
+    .scan-image {
+        font-size: 12px; /* Smaller text for headings */
+        margin-left: -21px;
+    }
+    .scan-image img {
+        width: 70px; /* Smallest image size */
+    }
+
+}
+
+
+
+.bag2 {
+    background: rgba(255, 255, 240, 0.163);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+
+
+
+/* Container Styling */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 20px; /* Spacing between boxes */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Individual Box Styling */
+  .box {
+    position: relative;
+    height: 150px; /* Set height of the box */
+    background-image: url('https://via.placeholder.com/300');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Gradient Overlay */
+  .box1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://img.freepik.com/premium-photo/realty-free-image_1023251-80924.jpg?w=740') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .box2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://img.freepik.com/premium-photo/close-up-butterfly-leaf_1048944-1881611.jpg?w=1380') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .box3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://i.natgeofe.com/n/748f1c42-0d8b-498e-85fd-88151c6f863b/01_organic_farming_i8860_20181003_11260.jpg?w=1440&h=959') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .box4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://geopard.tech/wp-content/uploads/2021/12/Crop-Diseases_-Types-Causes-and-Symptoms-min.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .box5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://img.freepik.com/free-photo/hydroponics-system-planting-vegetables-herbs-without-using-soil-health_1150-8158.jpg?t=st=1737315064~exp=1737318664~hmac=793f655a9bd5a24078d665a7deefc1fa75db7b9183488f51d9772d9c83e4d5db&w=1380') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .box6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(53, 96, 102, 0.792), rgba(53, 96, 102, 0.781)), 
+        url('https://img.freepik.com/premium-photo/scenic-view-agricultural-field-against-sky-sunset_1048944-28083966.jpg?w=996') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  /* Box Content Styling */
+  .box-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Heading Styling */
+  .box-content h3 {
+    font-size: 18px;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  /* Arrow Styling */
+  .box-content .arrow-tir {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .box-container {
+        grid-template-columns: repeat(2, 1fr); /* 1 column on smaller screens */
+    }
+  
+    .box {
+      height: 120px; /* Adjust height for smaller screens */
+    }
+  
+    .box-content h3 {
+      font-size: 16px; /* Smaller font size */
+    }
+  
+    .arrow-tir {
+      font-size: 20px; /* Adjust arrow size */
+    }
+  }
+  

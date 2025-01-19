@@ -205,7 +205,7 @@ export const MainFeaturesPage = () => {
     const [fiveDayForecastData , setFiveDayForecastData] = useState(null)
 
     const navigate = useNavigate()
-    const apiKey = "ei5ZkKTcoRCHjHgJGyUQr41f4Ewmn5VG";
+    const apiKey = "ei5ZkKTcoRCHjHgJGyUQr41f4Ewmn5VGk";
     const locationQuery = "Bhubaneswar";
 
     // Filter crops to only include those whose IDs are in the user's selectedCrops array
@@ -292,6 +292,7 @@ export const MainFeaturesPage = () => {
 
 
     return (
+        <>
         <div className="features-container">
             <div className="crops-container">
                 {selectedCrops.map((crops, index) => (
@@ -422,12 +423,74 @@ export const MainFeaturesPage = () => {
     </div>
 </div>
 
+<div className="scanner-container bag2">
+    <div className="scan-images-container">
+        <div className="scan-image">
+        <img src="https://img.freepik.com/premium-photo/hand-holds-smartphone-taking-photo-yellow-flowers-growing-greenhouse_284520-1550.jpg?w=1380" alt="" />
+        <h3>Take a Picture</h3>
+        </div>
+        <h6 className='pin-arrow'>→</h6>
+        <div className="scan-image">
+        <img src="https://img.freepik.com/free-vector/regenerative-agriculture-isometric-set-with-mobile-app-templates-helping-healthy-crop-growing-isolated-vector-illustration_1284-80062.jpg?t=st=1737294562~exp=1737298162~hmac=ee1ea002403dd6f3ea13b02a0587cc2a2d5846a8487cb05c71553776aeee5e0e&w=1380" alt="" />
+        <h3>See Diagonesis</h3>
+        </div>
+        <h6 className='pin-arrow'>→</h6>
+        <div className="scan-image">
+        <img src="https://img.freepik.com/free-photo/front-view-black-yellow-green-juice-bottles_140725-99675.jpg?t=st=1737294989~exp=1737298589~hmac=c9303e6dbdb01ad6b3f3fa35b99efabcf53b4a9ffcac7816de3318240f6efd92&w=1380" alt="" />
+        <h3>Get Medicine</h3>
+        </div>
+        
+        </div>
+                
+    <button className='scan-btn'>Take a Picture</button>
+</div>
 
-
-
+<div class="box-container">
+  <div class="box1 box">
+    <div class="box-content">
+      <h3>Fertilizer Calculator</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+  <div class="box2 box">
+    <div class="box-content">
+      <h3>Pests and diseases</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+  <div class="box3 box">
+    <div class="box-content">
+      <h3>Cultivation Tips</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+  <div class="box4 box">
+    <div class="box-content">
+      <h3>Disease Alert and pests</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+  <div class="box5 box">
+    <div class="box-content">
+      <h3>Estamate your Profit</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+  <div class="box6 box">
+    <div class="box-content">
+      <h3>Add field</h3>
+      <span class="arrow-tir">&gt;</span>
+    </div>
+  </div>
+</div>
 
             <SelectCrops open={openSelectbox} setOpen={setOpenSelectbox} />
            
         </div>
+        {/* <div className="features-container2">
+       
+
+        </div> */}
+        </>
     );
 };
