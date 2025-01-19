@@ -192,16 +192,21 @@ import "../css/features_page.css";
 import { Plus } from 'lucide-react';
 import { SelectCrops } from '@/components/layout/SelectCrops';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+// import WeatherBox from '@/components/layout/WeatherBox';
 
 export const MainFeaturesPage = () => {
     const { user } = useSelector((store) => store.auth);
     const { Crops } = useSelector((store) => store.crop);
     const [openSelectbox, setOpenSelectbox] = useState(false);
+    // const [openWeatherbox, setOpenWeatherbox] = useState(false);
     const [locationKey, setLocationKey] = useState("");
     const [weatherData, setWeatherData] = useState(null);
+    const [fiveDayForecastData , setFiveDayForecastData] = useState(null)
 
+    const navigate = useNavigate()
     const apiKey = "ei5ZkKTcoRCHjHgJGyUQr41f4Ewmn5VG";
-    const locationQuery = "padampur";
+    const locationQuery = "Bhubaneswar";
 
     // Filter crops to only include those whose IDs are in the user's selectedCrops array
     const selectedCrops = Crops.filter((crop) => user?.selectedCrops?.includes(crop._id));
@@ -236,10 +241,38 @@ export const MainFeaturesPage = () => {
         }
     };
 
+    const fetch5dayForecastWeather = async () => {
+        if(!locationKey) return;
+        const FivedayForecastApi = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKey}&details=true`
+        try {
+            const response = await axios.get(FivedayForecastApi);
+            console.log("Fiveday Forecast Weather Data:", response.data);
+            setFiveDayForecastData(response.data); // Store the data in state
+        } catch (error) {
+            console.error("Error fetching 5 day forecast weather data:", error.message);
+        }
+    }
+
     useEffect(() => {
         // Fetch location data on component mount
         fetchLocationData();
+       
     }, []);
+
+    useEffect(() => {
+        if (locationKey) {
+            // Fetch initial five-day forecast
+            fetch5dayForecastWeather();
+    
+            // Set up interval to fetch forecast data every 24 hours
+            const intervalId = setInterval(() => {
+                fetch5dayForecastWeather();
+            }, 86400000); // 1 day in milliseconds
+    
+            // Cleanup interval on component unmount
+            return () => clearInterval(intervalId);
+        }
+    }, [locationKey]); // Depend on locationKey
 
     useEffect(() => {
         // Fetch current weather data whenever locationKey changes
@@ -252,7 +285,11 @@ export const MainFeaturesPage = () => {
             // Cleanup interval on component unmount
             return () => clearInterval(intervalId);
         }
+        
     }, [locationKey]); // Depend on locationKey
+
+    // const MaxTemp = (fiveDayForecastData.DailyForecasts[0].Temperature.Maximum.Value-32)*(5/9)
+
 
     return (
         <div className="features-container">
@@ -270,7 +307,9 @@ export const MainFeaturesPage = () => {
                 </div>
             </div>
 
-            <div
+            <div onClick={() => navigate("/weather", {
+            state: { weatherData, fiveDayForecastData, locationQuery },
+        })}
     className="weather-box"
     style={{
         backgroundImage: `url(${
@@ -286,10 +325,10 @@ export const MainFeaturesPage = () => {
     }}
 >
     <div className="weather-upper">
-        <div className="weather-left">
+        <div className="weather-left ">
             <h1 className="temperature">
                 {weatherData && weatherData[0]
-                    ? `${weatherData[0].Temperature.Metric.Value}°`
+                    ? `${weatherData[0].Temperature.Metric.Value}°C`
                     : "Loading..."}
             </h1>
             {weatherData && weatherData[0] ? (
@@ -307,30 +346,47 @@ export const MainFeaturesPage = () => {
                 {weatherData && weatherData[0] ? weatherData[0].WeatherText : ""}
             </p>
         </div>
-        <div className="weather-right">
-            <img src="/icons/location.png" alt="Location Icon" className="location-icon" />
+        <div className="weather-right ">
+        <h2>No Rain</h2>
+            
+        <img src="/icons/location.png" alt="Location Icon" className="location-icon" />
             <h2 className="location">{locationQuery}</h2>
         </div>
     </div>
 
     <div className="weather-lower">
-        <div className="detail-item">
+        <div className="detail-item bag">
+        <img src="/icons/minmax.png" alt="Wind Icon" />
             <p>
                 High :{" "}
                 <span>
-                    {weatherData && weatherData[0] ? "29°" : "Loading..."}
+                    {fiveDayForecastData  ? `${Math.round((fiveDayForecastData.DailyForecasts[0].Temperature.Maximum.Value-32)*(5/9))}°C /`
+
+                        : 
+                    "Loading..."}
                 </span>
+                
             </p>
-        </div>
-        <div className="detail-item">
             <p>
                 Low :{" "}
                 <span>
-                    {weatherData && weatherData[0] ? "13°" : "Loading..."}
+                {fiveDayForecastData  ? `${Math.round((fiveDayForecastData.DailyForecasts[0].Temperature.Minimum.Value-32)*(5/9))}°C`
+: 
+"Loading..."}
                 </span>
             </p>
         </div>
-        <div className="detail-item">
+        {/* <div className="detail-item bag">
+            <p>
+                Low :{" "}
+                <span>
+                {fiveDayForecastData  ? `${Math.round((fiveDayForecastData.DailyForecasts[0].Temperature.Minimum.Value-32)*(5/9))}°`
+: 
+"Loading..."}
+                </span>
+            </p>
+        </div> */}
+        <div className="detail-item bag">
             <img src="/icons/windy.png" alt="Wind Icon" />
             <p>
                 Wind :{" "}
@@ -341,7 +397,7 @@ export const MainFeaturesPage = () => {
                 </span>
             </p>
         </div>
-        <div className="detail-item">
+        <div className="detail-item bag">
             <img src="/icons/thermometer.png" alt="Humidity Icon" />
             <p>
                 Humidity :{" "}
@@ -352,7 +408,7 @@ export const MainFeaturesPage = () => {
                 </span>
             </p>
         </div>
-        <div className="detail-item">
+        <div className="detail-item bag">
             <img src="/icons/barometer.png" alt="Pressure Icon" />
             <p>
                 Pressure :{" "}
@@ -364,10 +420,14 @@ export const MainFeaturesPage = () => {
             </p>
         </div>
     </div>
-</div>;
+</div>
+
+
+
 
 
             <SelectCrops open={openSelectbox} setOpen={setOpenSelectbox} />
+           
         </div>
     );
 };

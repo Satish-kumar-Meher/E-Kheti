@@ -11,12 +11,15 @@ import ResetPasswordPage from "./pages/auth/ResetPassword";
 import { ProfilePage } from "./pages/Profile";
 import { EditProfile } from "./pages/EditProfile";
 import { MainFeaturesPage } from "./pages/MainFeaturesPage";
+import WeatherBox from "./components/layout/WeatherBox";
+import ProtectedRoutes from "./pages/ProtectedRoutes";
+// import SessionCheck from "./pages/SessionCheck";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout />,
+    element:<AppLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -53,15 +56,19 @@ const router = createBrowserRouter([
       // },
       {
         path: "/profile/:id",
-        element: <ProfilePage/>
+        element: <ProtectedRoutes> <ProfilePage/></ProtectedRoutes>
       },
       {
         path: "/editprofile",
-        element: <EditProfile/>
+        element: <ProtectedRoutes> <EditProfile/></ProtectedRoutes>
       },
       {
         path: "/features",
-        element: <MainFeaturesPage/>
+        element: <ProtectedRoutes> <MainFeaturesPage/> </ProtectedRoutes>
+      },
+      {
+        path: "/weather",
+        element: <ProtectedRoutes> <WeatherBox/></ProtectedRoutes>
       },
     ],
   },

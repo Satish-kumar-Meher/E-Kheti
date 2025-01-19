@@ -140,19 +140,7 @@ export const Navbar = () => {
                             </>
                         ) : (
                             <>
-                             <li><NavLink  
-                            //  to={`/profile/${user._id}`}
-                            to={user!==null?(`/profile/${user._id}`):"/"}
-                            // to={`/profile/${user._id}`}
-                             onClick={
-                        
-                                closeMenu // Call the second function
-                              }
-                             >
-                                
-                                PROFILE
-                        
-                        </NavLink></li>
+                             
                                 <li><NavLink to="/register" onClick={closeMenu}>REGISTER</NavLink></li>
                                 <li><NavLink to="/login" onClick={closeMenu}>LOGIN</NavLink></li>
                             </>
